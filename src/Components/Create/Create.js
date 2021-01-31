@@ -1,28 +1,19 @@
-import React, {useState } from 'react';
+import React from 'react';
 import './Create.scss';
 
 const Create = () => {
 
-const[body, setBody] = useState("");
-
-const updateBody = (event) => {
-    setBody(event.target.value);
-  }
-const handleSubmit = (event) => {
-    setBody(event.target.value);  
-    console.log(event.target.value);
-}
 
     return(
         <div>
   <h1>New Blog</h1>
-        <form onSubmit={handleSubmit}>
+        <form action="/" method="POST">
        <label>Title:</label> 
-       <input type="text" className="blog-input" id="input-field" value={body} onChange={updateBody} required />
+       <input type="text" className="blog-input" name="title" id="input-field" required />
        <label>Snippet:</label> 
-       <textarea placeholder="write your snippet here..." className="blog-snippet" id="input-field" value={body} onChange={updateBody} required ></textarea>
+       <textarea placeholder="write your snippet here..." name="snippet" className="blog-snippet" id="input-field" required ></textarea>
        <label>Body:</label> 
-       <textarea placeholder="write your blog here..." className="blog-text" id="input-field" value={body} onChange={updateBody} required ></textarea>
+       <textarea placeholder="write your blog here..." name="body" className="blog-text" id="input-field"required ></textarea>
         <button>Submit</button>
         </form>
         </div>

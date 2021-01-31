@@ -5,7 +5,7 @@ const[results, setResults] = useState([]);
 
 useEffect(()=> {
     const fetchData = async () =>{
-        const url = await fetch('/api/blogs');
+        const url = await fetch('api/blogs');
         const response = await url.json();
         console.log(response);
         setResults(response);    
