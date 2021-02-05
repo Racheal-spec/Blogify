@@ -13,7 +13,7 @@ const Create = () => {
        <label>Snippet:</label> 
        <textarea placeholder="write your snippet here..." name="snippet" className="blog-snippet" id="input-field" required ></textarea>
        <label>Body:</label> 
-       <textarea placeholder="write your blog here..." name="body" className="blog-text" id="input-field"required ></textarea>
+       <textarea placeholder="write your blog here..." name="content" className="blog-text" id="input-field"required ></textarea>
         <button>Submit</button>
         </form>
         </div>

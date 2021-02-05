@@ -1,17 +1,19 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Home = () => {
-const[results, setResults] = useState([]);
+
+const[results, setResults] = useState('');
 
 useEffect(()=> {
     const fetchData = async () =>{
-        const url = await fetch('api/blogs');
+        const url = await fetch('http://localhost:5000/api/create');
         const response = await url.json();
         console.log(response);
         setResults(response);    
         }
   fetchData();      
 }, [])// eslint-disable-next-line
+
     return(
         <div>
             <h1>Home</h1>
@@ -23,7 +25,7 @@ useEffect(()=> {
             <div className="blog-div" key={result.id}>
              <h1>{result.title}</h1>
              <p>{result.snippet}</p>
-             <p>{result.body}</p>
+             <p>{result.content}</p>
             </div>
             ))    
        

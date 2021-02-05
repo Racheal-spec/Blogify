@@ -1,15 +1,26 @@
 const express = require('express');
 const app = express()
-const cors = require("cors");
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
+const cors = require("cors");
 const routesUrls = require('./Routes/Routes');
 
 dotenv.config();
-
-const port = 5000;
 //This is mongodb database
- mongoose.connect(process.env.DB_ACCESS, {useNewUrlParser: true, useUnifiedTopology:true}, ()=> console.log('mongodb is connected'));
+const uri = process.env.DB_ACCESS;
+const connectionParams={
+    useNewUrlParser: true,
+    useCreateIndex: true,
+    useUnifiedTopology: true 
+}
+const port = 5000;
+mongoose.connect(uri, connectionParams)
+.then(() => {
+console.log('connected to database');
+})
+.catch( (err) => {
+    console.error(`Error connecting to the database. \n${err}`);
+})
  
 app.use(express.urlencoded({extended: true}));
   
