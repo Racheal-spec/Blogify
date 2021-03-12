@@ -1,0 +1,13 @@
+POST http://localhost:5000/api HTTP/1.1
+Content-Type: application/json
+
+
+{
+    "creator": "Racheal",
+    "title":"Heyyy",
+    "snippet":"It's Tomisin",
+    "content":"I love cofee and indomie",
+    "tags":"Heyyy",
+    "selectedFile": ""
+}
+ 

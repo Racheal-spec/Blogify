@@ -13,10 +13,10 @@ const NavbarDesktop = () => {
      <Link to='/' className="links">
        <li>Home</li>
      </Link>
-     <Link to='/About' className="links">
+     <Link to='/about' className="links">
          <li>About</li>
      </Link>
-     <Link to='/Create' className="links" id="create-link">
+     <Link to='/create' className="links" id="create-link">
          <li>Create New Blog</li>
      </Link>
  </div>

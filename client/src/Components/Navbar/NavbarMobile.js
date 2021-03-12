@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import {Link} from 'react-router-dom'; 
-import menu from '../../icons8-menu.svg';
-import cancel from '../../icons8-cancel.svg';
+import menu from '../../images/icons8-menu.svg';
+import cancel from '../../images/icons8-cancel.svg';
 
 const NavbarMobile = () => {
 
